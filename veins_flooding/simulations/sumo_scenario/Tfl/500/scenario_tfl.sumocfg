@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+	<input>
+		<net-file value="scenario_tfl.net.xml"/> 
+		<!--route-files value="50.rou.xml"/--> 		
+		<!--route-files value="200.rou.xml"/--> 		
+		<route-files value="500.rou.xml"/> 		
+		<!--additional-files value="scenario_tfl.poly.xml"/-->
+		<!--gui-settings-file value="scenario_tfl.settings.xml"/-->
+
+	</input>
+
+	<time>
+		<begin value="0"/>
+		<end value="1000"/>
+		<step-length value="0.1"/> 
+	</time>
+
+</configuration>

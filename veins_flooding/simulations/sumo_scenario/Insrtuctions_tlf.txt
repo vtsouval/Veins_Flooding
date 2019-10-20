@@ -1,0 +1,19 @@
+(1) 
+netconvert --osm-files map.osm -o scenario.net.xml
+
+(2)
+polyconvert --net-file scenario_tfl.net.xml --osm-files map.osm --type-file typemap.xml -o scenario_tfl.poly.xml
+
+(3)
+python /usr/local/opt/sumo/share/sumo/tools/randomTrips.py -n scenario_tfl.net.xml -r 500.rou.xml  -p 0.1 -e 50 -l 
+
+python /usr/local/opt/sumo/share/sumo/tools/randomTrips.py -n scenario_tfl.net.xml -r 200.rou.xml  -p 0.25 -e 50 -l 
+
+python /usr/local/opt/sumo/share/sumo/tools/randomTrips.py -n scenario_tfl.net.xml -r 50.rou.xml  -p 1 -e 50 -l 
+
+(4)
+Add to the beginning of the trips inside the X.rou.xml file this:
+
+<!-- Emergency Vehicle Route -->
+    <vType id="EV" length="8.00" vClass="emergency" guiShape="emergency" color="red"/>
+    <trip id="trip_0" type="EV" depart="0.00" from="446233233" to="686250326#6" via="446233235 254759928 473325692 473325694#0 473325694#1 8920975#2 8920975#3 686250330 277480425 417087411#0 144489137#8 254758125#0 254758125#2 277480563 277480424#0 277480424#1 686250326#2 686250326#3 686250326#4 686250326#5"/>

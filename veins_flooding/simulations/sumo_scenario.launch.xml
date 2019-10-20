@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+	
+	<basedir path="/home/veins/workspace.omnetpp2/flooding_1/simulations/sumo_scenario/No_tfl/50"></basedir>
+	<!--basedir path="/home/veins/workspace.omnetpp2/flooding_1/simulations/sumo_scenario/No_tfl/200"></basedir-->
+	<!--basedir path="/home/veins/workspace.omnetpp2/flooding_1/simulations/sumo_scenario/No_tfl/500"></basedir-->
+
+
+ 	<!--basedir path="/home/veins/workspace.omnetpp2/flooding_1/simulations/sumo_scenario/Tfl/50"></basedir-->
+  	<!--basedir path="/home/veins/workspace.omnetpp2/flooding_1/simulations/sumo_scenario/Tfl/200"></basedir-->
+ 	<!--basedir path="/home/veins/workspace.omnetpp2/flooding_1/simulations/sumo_scenario/Tfl/500"></basedir-->
+
+	<copy file="scenario.net.xml"></copy>
+	<copy file="50.rou.xml"></copy>
+	<!--opy file="200.rou.xml"></copy-->
+	<!--copy file="500.rou.xml"></copy-->
+ 	<copy file="scenario.sumocfg" type="config"></copy>
+ 	
+</launch>
